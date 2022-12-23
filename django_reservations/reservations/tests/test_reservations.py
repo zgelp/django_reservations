@@ -21,6 +21,7 @@ class TestReservationDisplay:
         Reservation(check_in=datetime(2022, 1, 20), check_out=datetime(2022, 2, 11), rental=rental2).save()
         Reservation(check_in=datetime(2022, 1, 22), check_out=datetime(2022, 2, 25), rental=rental2).save()
         Reservation(check_in=datetime(2022, 1, 25), check_out=datetime(2022, 2, 26), rental=rental2).save()
+        Reservation(id=25, check_in=datetime(2022, 1, 25), check_out=datetime(2022, 2, 26), rental=rental2).save()
 
     def test_reservations(self):
         data = prepare_table_data()
