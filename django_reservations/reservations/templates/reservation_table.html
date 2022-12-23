@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Rental</th>
+    <th>ID</th>
+    <th>Check-in date</th>
+    <th>Check-out date</th>
+    <th>Previous reservation ID</th>
+  </tr>
+  {% for rental in rentals %}
+      <tr>
+        <td>{{ rental.0 }}</td>
+        <td>{{ rental.1 }}</td>
+        <td>{{ rental.2 }}</td>
+        <td>{{ rental.3 }}</td>
+        <td>{{ rental.4 }}</td>
+      </tr>
+  {% endfor %}
+</table>
