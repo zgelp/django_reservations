@@ -24,3 +24,4 @@ class TestReservationDisplay:
 
     def test_reservations(self):
         data = prepare_table_data()
+        print(data)
