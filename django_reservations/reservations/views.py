@@ -15,5 +15,5 @@ def prepare_table_data():
 
 
 def reservations_view(request):
-    rentals = prepare_table_data()
-    return render(request, 'reservation_table.html', {'rentals': rentals})
+    reservations = prepare_table_data()
+    return render(request, 'reservation_table.html', {'reservations': reservations})

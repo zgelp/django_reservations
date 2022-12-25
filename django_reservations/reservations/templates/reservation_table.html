@@ -6,13 +6,30 @@
     <th>Check-out date</th>
     <th>Previous reservation ID</th>
   </tr>
-  {% for rental in rentals %}
+  {% for reservation in reservations %}
       <tr>
-        <td>{{ rental.0 }}</td>
-        <td>{{ rental.1 }}</td>
-        <td>{{ rental.2 }}</td>
-        <td>{{ rental.3 }}</td>
-        <td>{{ rental.4 }}</td>
+        <td>{{ reservation.0 }}</td>
+        <td>{{ reservation.1 }}</td>
+        <td>{{ reservation.2 }}</td>
+        <td>{{ reservation.3 }}</td>
+        <td>{{ reservation.4 }}</td>
       </tr>
   {% endfor %}
 </table>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
