@@ -7,11 +7,11 @@ class Command(BaseCommand):
     help = 'Seeds database with data from example file'
 
     def handle(self, *args, **options):
-        Rental(rental_name="rental-1").save()
-        Rental(rental_name="rental-2").save()
+        Rental(rental_name="rental").save()
+        Rental(rental_name="rental").save()
 
-        rental1 = Rental.objects.get(rental_name="rental-1")
-        rental2 = Rental.objects.get(rental_name="rental-2")
+        rental1 = Rental.objects.get(id=1)
+        rental2 = Rental.objects.get(id=2)
 
         Reservation(check_in=datetime.datetime(2022, 1, 1), check_out=datetime.datetime(2022, 1, 13),
                     rental=rental1).save()

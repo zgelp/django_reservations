@@ -8,11 +8,15 @@
   </tr>
   {% for reservation in reservations %}
       <tr>
-        <td>{{ reservation.0 }}</td>
-        <td>{{ reservation.1 }}</td>
-        <td>{{ reservation.2 }}</td>
-        <td>{{ reservation.3 }}</td>
-        <td>{{ reservation.4 }}</td>
+        <td>rental-{{ reservation.rental_id }}</td>
+        <td>{{ reservation.id }}</td>
+        <td>{{ reservation.check_in }}</td>
+        <td>{{ reservation.check_out }}</td>
+      {% if reservation.previous_reservation_id %}
+        <td>{{ reservation.previous_reservation_id }}</td>
+      {% else %}
+          <td>-</td>
+      {% endif %}
       </tr>
   {% endfor %}
 </table>
